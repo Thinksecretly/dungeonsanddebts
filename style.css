@@ -6,148 +6,101 @@
 }
 
 body {
-    font-family: "Yatra one", "Ariel", sans-serif;
+    font-family: "Yatra One", Arial, sans-serif;
     line-height: 1.6;
     color: #333333;
     background: #FBFAEF;
+    text-align: center; /* Center text for better mobile readability */
 }
 
 header {
     background: transparent;
     color: #fff;
-    padding: 0rem 0;
-    text-align: center;
-
+    padding: 1rem 0; /* Add padding for smaller screens */
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5rem;
+    padding: 0 2%; /* Use percentage for padding */
 }
 
 nav .logo {
     font-size: 1.5rem;
-    color: #000000;
+    color: #000;
     text-decoration: none;
-    font-family: "sofia";
+    font-family: "Sofia", sans-serif; /* Ensure font fallbacks are consistent */
 }
 
 nav ul.navigation {
     list-style: none;
     display: flex;
-}
-
-nav ul.navigation li {
-    margin-left: 1rem;
+    flex-wrap: wrap; /* Allow navigation items to wrap on small screens */
 }
 
 nav ul.navigation li a {
-    color: #000000;
+    color: #000;
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: background 0.3s ease;
 }
 
-nav ul.navigation li a:hover {
-    background: #555;
-}
-
-
-.hero {
-    display: flex;
-    /* This makes it a flex container */
-    align-items: center;
-    /* This vertically centers the flex items if there's extra space on the cross axis */
-    justify-content: center;
-    /* This horizontally centers the flex items in the container */
-    text-align: center;
-    color: #000000;
-    height: 60vh;
-
+/* Responsive image and hero section */
+.hero, .background-image {
+    height: auto; /* Set height to auto for flexibility */
+    width: 100%; /* Full width */
 }
 
 .background-image {
-    flex: 1;
-    /* This allows the image to take up as much width as possible */
     background: url('./images/debts-simple.webp') no-repeat center center / cover;
-    height: 60vh;
-    /* This sets the height to be the full viewport height */
-    width: 75vw;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-.hero-content {
-    flex: 1;
-
-    padding-top: 15vh;
-    background: #FBFAEF;
-    height: 100%;
-    /* Adjust padding as needed */
-    /* Add other styles for your hero contnt here */
-}
-
-
-
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
+/* Button styling */
 .btn-primary {
-    background-image:
-        linear-gradient(to right, #e3e495 0%, #ff9500 100%);
-    /* Golden color */
-    color: #000000;
-    /* Black text */
-    padding: 0.8rem 1.6rem;
-    /* Size of the button */
-    text-decoration: none;
-    /* No underline */
-    display: inline-block;
-    /* Allows the use of margin and padding */
-    border: 2px solid #000000;
-    /* Black border with a thickness of 2px */
-    border-radius: 5px;
-    /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-    cursor: pointer;
-    /* Hand icon on hover */
-    transition: all 0.3s ease;
-    /* Smooth transition for all properties */
-    text-transform: uppercase;
-    /* Uppercase text */
-    font-weight: bold;
-    /* Bold text */
+    display: block; /* Block level for full width tap target on mobile */
+    width: auto; /* Auto width for intrinsic space */
+    margin: 1rem auto; /* Center button with margin */
 }
 
-.btn-primary:hover {
-    background-image:
-        linear-gradient(to right, #e1e44d 0%, #bc7209 100%);
-
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-
+/* Media Queries for Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Stack elements vertically on small screens */
+    }
 }
 
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column; /* Stack nav items vertically */
+    }
 
+    nav ul.navigation li {
+        margin: 0.5rem 0; /* Adjust margin for nav items */
+    }
 
+    .hero h1 {
+        font-size: 1.8rem; /* Reduce font size for smaller screens */
+    }
 
+    .hero p {
+        font-size: 1rem; /* Adjust paragraph font size for readability */
+    }
+
+    .btn-primary {
+        padding: 0.5rem; /* Adjust padding for smaller buttons */
+    }
+}
+
+/* Footer adjustments */
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+    padding: 1rem; /* Adjust padding for footer */
 }
 
-footer p {
-    margin: 0;
+/* Ensure images within content areas are also responsive */
+img {
+    max-width: 100%;
+    height: auto;
 }
