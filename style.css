@@ -36,7 +36,7 @@ nav .logo {
 nav ul.navigation {
     list-style: none;
     display: flex;
-    flex-wrap: wrap; /* Allow navigation items to wrap on small screens */
+    flex-wrap: nowrap; /* Allow navigation items to wrap on small screens */
 }
 
 nav ul.navigation li a {
