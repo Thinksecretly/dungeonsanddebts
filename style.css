@@ -95,9 +95,39 @@ nav ul.navigation li a {
 
 /* Button styling */
 .btn-primary {
-    display: block; /* Block level for full width tap target on mobile */
-    width: auto; /* Auto width for intrinsic space */
-    margin: 1rem auto; /* Center button with margin */
+    background-image:
+        linear-gradient(to right, #e3e495 0%, #ff9500 100%);
+    /* Golden color */
+    color: #000000;
+    /* Black text */
+    padding: 0.8rem 1.6rem;
+    /* Size of the button */
+    text-decoration: none;
+    /* No underline */
+    display: inline-block;
+    /* Allows the use of margin and padding */
+    border: 2px solid #000000;
+    /* Black border with a thickness of 2px */
+    border-radius: 5px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    cursor: pointer;
+    /* Hand icon on hover */
+    transition: all 0.3s ease;
+    /* Smooth transition for all properties */
+    text-transform: uppercase;
+    /* Uppercase text */
+    font-weight: bold;
+    /* Bold text */
+}
+
+.btn-primary:hover {
+    background-image:
+        linear-gradient(to right, #e1e44d 0%, #bc7209 100%);
+
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
 }
 
 /* Media Queries for Responsive Adjustments */
