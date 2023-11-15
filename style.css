@@ -60,7 +60,7 @@ nav ul.navigation li a {
 
 }
 
-.background-image {
+.hero-image {
     flex: 1;
     /* This allows the image to take up as much width as possible */
     background: url('./images/debts-simple.webp') no-repeat center center / cover;
