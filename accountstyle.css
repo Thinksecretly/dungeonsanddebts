@@ -1,103 +1,77 @@
-body {
+/* Reset some basic elements */
+body, html {
+    margin: 0;
+    padding: 0;
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
-    padding: 10px; /* Reduced padding on smaller screens */
     color: #333;
 }
 
-.character-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.character-card {
-    background: linear-gradient(145deg, #ffffff, #f0f0f0);
-    border: 2px solid transparent;
-    border-radius: 10px;
-    width: 90%; /* More flexible width for smaller screens */
-    max-width: 300px; /* Ensures cards don't get too large on wider screens */
-    margin-bottom: 20px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    overflow: hidden;
-}
-
-.character-card:hover {
-    transform: translateY(-5px);
-    border-color: #007bff;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.character-card img {
-    width: 100%; /* Ensures the image width is always 100% of its parent container */
-    height: auto; /* Maintains the aspect ratio */
-    max-width: 150px; /* Limits the image size to not exceed 150px */
-    display: block; /* Ensures the image is block-level for proper centering */
-    margin: 0 auto 15px; /* Centers the image horizontally and adds space below */
-}
-
-.character-info {
-    padding: 20px;
-}
-
-.character-info h3, .character-info p {
-    margin: 10px 0;
-}
-
+/* Navigation Button */
 .navigation-button {
-    display: inline-block; /* Change to inline-block for better control */
-    background-color: #007bff; /* Blue background for a modern look */
-    color: white;
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     font-size: 16px;
-    margin-top: 20px; /* Spacing from content above */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Consistent shadow */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .navigation-button:hover {
-    background-color: #0056b3; /* Darker on hover for interaction feedback */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+    background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Media Query for Tablets and Desktops */
+/* Container for characters, for centering and padding */
+.character {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.character img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    text-align: center;
+    color: #007bff;
+    margin: 20px 0;
+}
+
+.character h3 {
+    margin-top: 0;
+}
+
+/* Responsive Design */
 @media (min-width: 768px) {
-    .character-container {
-        justify-content: space-between;
+    .character {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 20px;
+        width: 80%;
+        max-width: 600px;
     }
 
-    .character-card {
-        width: calc(50% - 40px); /* Adjusts width for 2 cards per row with margin */
-        margin: 20px; /* Adds more space around cards */
-    }
-
-    .navigation-button {
-        display: inline-block; /* Restores button to inline-block display */
-        width: auto; /* Resets width to auto */
-    }
-}
-
-@media (max-width: 768px) {
-    .character-card img {
-        max-width: 80px; /* Further reduce the maximum image width on smaller screens if 100px is still too large */
-        width: 80%; /* Optionally, you could use a percentage value to make the image width more responsive */
-        height: auto; /* This ensures the image scales correctly in proportion */
-    }
-}
-
-
-
-
-/* Media Query for Desktops */
-@media (min-width: 1024px) {
-    .character-card {
-        width: calc(33.333% - 40px); /* Adjusts for 3 cards per row */
+    .character img {
+        width: 150px; /* Fixed width for larger screens */
+        margin-right: 20px;
     }
 }
 
