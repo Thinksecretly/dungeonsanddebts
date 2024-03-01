@@ -85,9 +85,12 @@ body {
 
 @media (max-width: 768px) {
     .character-card img {
-        max-width: 100px; /* Reduces the maximum image width on smaller screens */
+        max-width: 80px; /* Further reduce the maximum image width on smaller screens if 100px is still too large */
+        width: 80%; /* Optionally, you could use a percentage value to make the image width more responsive */
+        height: auto; /* This ensures the image scales correctly in proportion */
     }
 }
+
 
 
 
