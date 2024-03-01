@@ -64,3 +64,24 @@ p {
 }
 
 /* Add more custom styles as needed */
+.news-container {
+    background-color: #333840;
+    color: #ffffff;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.news-item {
+    margin-bottom: 20px;
+}
+
+.news-item h3 {
+    color: #ff477e;
+}
+
+.news-date {
+    font-style: italic;
+    color: #cccccc;
+}
