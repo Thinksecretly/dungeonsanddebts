@@ -61,7 +61,7 @@ p {
 /* News section styled as cards */
 .news-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive card layout */
+    grid-template-rows: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive card layout */
     gap: 20px;
 }
 
@@ -78,7 +78,7 @@ p {
     box-shadow: 0 6px 12px rgba(0,0,0,0.5); /* Enhanced shadow for lifted effect */
 }
 
-.news-item h3, .news-item p, .news-date {
+.news-item h3, h2, .news-item p, .news-date {
     padding: 15px;
 }
 
