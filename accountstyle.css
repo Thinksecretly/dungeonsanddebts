@@ -33,8 +33,11 @@ body {
 }
 
 .character-card img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Ensures the image width is always 100% of its parent container */
+    height: auto; /* Maintains the aspect ratio */
+    max-width: 150px; /* Limits the image size to not exceed 150px */
+    display: block; /* Ensures the image is block-level for proper centering */
+    margin: 0 auto 15px; /* Centers the image horizontally and adds space below */
 }
 
 .character-info {
@@ -80,13 +83,7 @@ body {
     }
 }
 
-.character-card img {
-    width: 100%; /* Ensures the image width is always 100% of its parent container */
-    height: auto; /* Maintains the aspect ratio */
-    max-width: 150px; /* Limits the image size to not exceed 150px */
-    display: block; /* Ensures the image is block-level for proper centering */
-    margin: 0 auto 15px; /* Centers the image horizontally and adds space below */
-}
+
 
 
 /* Media Query for Desktops */
