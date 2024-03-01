@@ -21,7 +21,8 @@ body {
     color: #007BFF;
 }
 .navigation-button {
-    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
     background-color: #4CAF50; /* Green background */
     color: white; /* White text */
     padding: 10px 20px; /* Padding around the text */
