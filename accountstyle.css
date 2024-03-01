@@ -83,6 +83,11 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .character-card img {
+        max-width: 100px; /* Reduces the maximum image width on smaller screens */
+    }
+}
 
 
 
