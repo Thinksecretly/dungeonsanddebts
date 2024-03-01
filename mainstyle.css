@@ -1,0 +1,66 @@
+/* Reset some basic elements */
+body, h1, p, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #282c34;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.button {
+    display: inline-block;
+    background-color: #ff477e;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #ff639d;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .button {
+        margin: 10px 0; /* Stack buttons vertically on smaller screens */
+    }
+}
+
+/* Add more custom styles as needed */
