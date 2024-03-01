@@ -37,3 +37,71 @@ body {
 .navigation-button:hover {
     background-color: #45a049; /* Darker green background on hover */
 }
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* bankacountspage */
+
+.character-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.character-card {
+    background-color: #ffffff;
+    border: 2px solid #dddddd;
+    border-radius: 10px;
+    width: 300px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.character-card:hover {
+    border-color: #007bff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.character-card img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+
+.character-info {
+    padding: 20px;
+}
+
+.character-info h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.character-info p {
+    color: #666;
+    margin: 5px 0;
+}
+
+.navigation-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation-button:hover {
+    background-color: #0056b3;
+}
