@@ -1,121 +1,80 @@
-/* Reset some basic elements */
-body, h1, p, a {
+/* Base styling */
+body, html {
     margin: 0;
     padding: 0;
-    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #282c34;
-    color: #ffffff;
-    text-align: center;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.container {
-    max-width: 800px;
-    margin: auto;
+.container, .news-container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+h1, h2, h3 {
+    color: #2a2a72;
 }
 
 p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .button {
     display: inline-block;
-    background-color: #ff477e;
-    color: #ffffff;
+    background-color: #4CAF50;
+    color: white;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease-in-out;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background-color: #ff639d;
+    background-color: #45a049;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    body {
-        flex-direction: column;
-    }
-
-    .button {
-        margin: 10px 0; /* Stack buttons vertically on smaller screens */
-    }
+/* Header and Welcome Section */
+.container {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
 }
 
-/* Add more custom styles as needed */
+/* News Section */
 .news-container {
-    background-color: #333840;
-    color: #ffffff;
-    margin-top: 40px;
-    padding: 20px;
-    border-radius: 8px;
+    background-color: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: -50px; /* Overlap the news section over the welcome section */
+    padding: 40px;
+    border-radius: 8px;
 }
 
 .news-item {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
     margin-bottom: 20px;
 }
 
-.news-item h3 {
-    color: #ff477e;
-}
-
 .news-date {
-    font-style: italic;
-    color: #cccccc;
-}
-.wizard {
-    width: 20px;
-    height: 20px;
-    background-color: blue;
-    position: fixed;
-    top: 10px;
-    left: 0;
-    border-radius: 50%;
-    border: 5px solid blue;
-    animation: runWizard 5s linear infinite;
+    color: #999;
+    font-size: 14px;
 }
 
-/* Hat for the wizard */
-.wizard:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 20px solid blue;
-    position: absolute;
-    top: -25px;
-    left: -5px;
-}
-
-@keyframes runWizard {
-    0% {
-        left: -25px; /* Start off-screen */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container, .news-container {
+        padding: 20px;
     }
-    100% {
-        left: 100%; /* End off-screen */
+
+    .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
