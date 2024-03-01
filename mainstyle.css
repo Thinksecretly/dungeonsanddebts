@@ -1,95 +1,101 @@
-/* Base styling */
+/* Base styling for a modern, dark theme */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif; /* A modern, rounded font */
-    background-color: #f0f2f5; /* A light, modern background color */
-    color: #333;
+    font-family: 'Roboto', sans-serif; /* Sleek, modern font */
+    background-color: #121212; /* Dark theme background */
+    color: #E0E0E0; /* Light text for contrast */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 a {
-    color: #007bff;
+    color: #BB86FC; /* Vibrant purple for links */
     text-decoration: none;
+    transition: color 0.2s;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #3700B3; /* Darker purple on hover for contrast */
 }
 
-/* Container */
+/* Container styles for centering and padding */
 .container, .news-container {
-    max-width: 1200px;
-    margin: 20px auto;
+    max-width: 960px;
+    margin: 40px auto;
     padding: 20px;
 }
 
 h1, h2, h3 {
-    color: #1a1a2e; /* A deep, rich blue */
+    color: #BB86FC; /* Maintaining the vibrant purple theme */
 }
 
 p {
     line-height: 1.6;
 }
 
+/* Button styles for interactivity */
 .button {
-    background-color: #ff4757; /* A youthful, vibrant color */
-    color: white;
+    background-color: #03DAC5; /* Accent color for buttons */
+    color: #000;
     padding: 10px 20px;
     border: none;
-    border-radius: 20px; /* Rounded corners for a modern look */
+    border-radius: 25px; /* Rounded edges for a modern, friendly look */
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .button:hover {
-    background-color: #ff6b81;
+    background-color: #018786; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight increase in size for emphasis */
 }
 
-/* Header and Welcome Section */
+/* Welcome section with a striking visual */
 .container {
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(to right, #ff5f6d, #ffc371); /* A modern gradient */
+    padding: 80px 20px;
+    background: #121212; /* Matching the dark theme */
     color: white;
-    border-radius: 10px; /* Rounded corners for the container */
+    border-radius: 15px; /* Soft rounded corners */
 }
 
-/* News Section */
+/* News section styled as cards */
 .news-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive card layout */
     gap: 20px;
-    padding-top: 20px;
 }
 
 .news-item {
-    background-color: white;
+    background-color: #1F1B24; /* Slightly lighter dark background for cards */
     border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Soft shadow for depth */
-    overflow: hidden; /* Ensures the content fits within the rounded corners */
-    display: flex;
-    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Subtle shadow for depth */
+    overflow: hidden; /* Ensures content adheres to card borders */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.news-item h3, .news-item p {
+.news-item:hover {
+    transform: translateY(-5px); /* Lift card on hover for interactivity */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5); /* Enhanced shadow for lifted effect */
+}
+
+.news-item h3, .news-item p, .news-date {
     padding: 15px;
 }
 
-.news-item p {
-    flex-grow: 1; /* Ensures the paragraph takes up the available space, pushing the date to the bottom */
-}
-
 .news-date {
-    background-color: #f0f2f5;
-    color: #999;
-    padding: 10px 15px;
+    color: #BB86FC; /* Accent color for dates */
     font-size: 14px;
     text-align: right;
 }
 
-/* Responsive Design */
+/* Media queries for responsive adjustments */
 @media (max-width: 768px) {
-    .news-container {
-        grid-template-columns: 1fr; /* Stack the cards on smaller screens */
+    .container, .news-container {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .container {
+        padding: 40px 10px;
     }
 }
