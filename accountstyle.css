@@ -46,9 +46,21 @@ body {
 }
 
 .navigation-button {
-    display: block; /* Ensures button spans the full width of its container on smaller screens */
-    width: auto; /* Allows the button to adjust its width as needed */
-    margin: 20px auto; /* Centers the button horizontally */
+    display: inline-block; /* Change to inline-block for better control */
+    background-color: #007bff; /* Blue background for a modern look */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px; /* Spacing from content above */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Consistent shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navigation-button:hover {
+    background-color: #0056b3; /* Darker on hover for interaction feedback */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
 }
 
 /* Media Query for Tablets and Desktops */
@@ -68,9 +80,19 @@ body {
     }
 }
 
+.character-card img {
+    width: 100%; /* Ensures the image width is always 100% of its parent container */
+    height: auto; /* Maintains the aspect ratio */
+    max-width: 150px; /* Limits the image size to not exceed 150px */
+    display: block; /* Ensures the image is block-level for proper centering */
+    margin: 0 auto 15px; /* Centers the image horizontally and adds space below */
+}
+
+
 /* Media Query for Desktops */
 @media (min-width: 1024px) {
     .character-card {
         width: calc(33.333% - 40px); /* Adjusts for 3 cards per row */
     }
 }
+
