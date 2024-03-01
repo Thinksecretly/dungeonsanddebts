@@ -26,12 +26,12 @@ body, html {
     transform: scale(1.05);
 }
 
-/* Main Heading */
+/* Main Heading
 h1 {
     text-align: center;
     color: #BB86FC;
     margin: 20px;
-}
+} */
 
 /* Service Cards */
 .service {
