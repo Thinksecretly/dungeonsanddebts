@@ -1,171 +1,59 @@
-/* Reset default browser styles */
-* {
+/* Basic reset */
+body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: "Yatra One", Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
     line-height: 1.6;
-    color: #333333;
-    background: #FBFAEF;
-    text-align: center; /* Center text for better mobile readability */
+    font-size: 16px;
+    padding: 20px;
 }
 
 header {
-    background: transparent;
-    color: #fff;
-    padding: 1rem 0; /* Add padding for smaller screens */
+    background: #0077CC;
+    color: #ffffff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2%; /* Use percentage for padding */
+header h1 {
+    padding-top: 20px;
 }
 
-nav .logo {
-    font-size: 1.5rem;
-    color: #000;
-    text-decoration: none;
-    font-family: "Sofia", sans-serif; /* Ensure font fallbacks are consistent */
+header p {
+    padding: 0 20px 20px 20px;
 }
 
-nav ul.navigation {
-    list-style: none;
-    display: flex;
-    flex-wrap: nowrap; /* Allow navigation items to wrap on small screens */
+main {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-nav ul.navigation li a {
-    color: #000;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: background 0.3s ease;
+section {
+    margin-bottom: 20px;
 }
 
-/* Responsive image and hero section */
-.hero {
-    display: flex;
-    /* This makes it a flex container */
-    align-items: center;
-    /* This vertically centers the flex items if there's extra space on the cross axis */
-    justify-content: center;
-    /* This horizontally centers the flex items in the container */
-    text-align: center;
-    color: #000000;
-    height: 60vh;
-
+h2 {
+    color: #0077CC;
+    margin-bottom: 10px;
 }
 
-.hero-image {
-    flex: 1;
-    /* This allows the image to take up as much width as possible */
-    background: url('./images/debts-simple.webp') no-repeat center center / cover;
-    height: 60vh;
-    /* This sets the height to be the full viewport height */
-    width: 75vw;
-    background-size: contain;
-    background-repeat: no-repeat;
+p {
+    margin-bottom: 10px;
 }
 
-.hero-content {
-    flex: 1;
-
-    padding-top: 15vh;
-    background: #FBFAEF;
-    height: 100%;
-    /* Adjust padding as needed */
-    /* Add other styles for your hero contnt here */
+ul {
+    list-style-position: inside;
+    margin-bottom: 20px;
 }
 
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-
-/* Button styling */
-.btn-primary {
-    background-image:
-        linear-gradient(to right, #e3e495 0%, #ff9500 100%);
-    /* Golden color */
-    color: #000000;
-    /* Black text */
-    padding: 0.8rem 1.6rem;
-    /* Size of the button */
-    text-decoration: none;
-    /* No underline */
-    display: inline-block;
-    /* Allows the use of margin and padding */
-    border: 2px solid #000000;
-    /* Black border with a thickness of 2px */
-    border-radius: 5px;
-    /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-    cursor: pointer;
-    /* Hand icon on hover */
-    transition: all 0.3s ease;
-    /* Smooth transition for all properties */
-    text-transform: uppercase;
-    /* Uppercase text */
-    font-weight: bold;
-    /* Bold text */
-}
-
-.btn-primary:hover {
-    background-image:
-        linear-gradient(to right, #e1e44d 0%, #bc7209 100%);
-
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-
-}
-
-/* Media Queries for Responsive Adjustments */
-@media screen and (max-width: 768px) {
-    .hero {
-        flex-direction: column; /* Stack elements vertically on small screens */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    nav {
-        flex-direction: column; /* Stack nav items vertically */
-    }
-
-    nav ul.navigation li {
-        margin: 0.5rem 0; /* Adjust margin for nav items */
-    }
-
-    .hero h1 {
-        font-size: 1.8rem; /* Reduce font size for smaller screens */
-    }
-
-    .hero p {
-        font-size: 1rem; /* Adjust paragraph font size for readability */
-    }
-
-    .btn-primary {
-        padding: 0.5rem; /* Adjust padding for smaller buttons */
-    }
-}
-
-/* Footer adjustments */
 footer {
-    padding: 1rem; /* Adjust padding for footer */
-}
-
-/* Ensure images within content areas are also responsive */
-img {
-    max-width: 100%;
-    height: auto;
+    text-align: center;
+    margin-top: 20px;
 }
