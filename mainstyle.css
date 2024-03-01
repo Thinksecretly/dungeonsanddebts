@@ -2,19 +2,29 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Poppins', sans-serif; /* A modern, rounded font */
+    background-color: #f0f2f5; /* A light, modern background color */
     color: #333;
 }
 
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
 .container, .news-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
 }
 
 h1, h2, h3 {
-    color: #2a2a72;
+    color: #1a1a2e; /* A deep, rich blue */
 }
 
 p {
@@ -22,59 +32,64 @@ p {
 }
 
 .button {
-    display: inline-block;
-    background-color: #4CAF50;
+    background-color: #ff4757; /* A youthful, vibrant color */
     color: white;
     padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 4px 2px;
+    border: none;
+    border-radius: 20px; /* Rounded corners for a modern look */
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .button:hover {
-    background-color: #45a049;
+    background-color: #ff6b81;
 }
 
 /* Header and Welcome Section */
 .container {
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 60px 20px;
+    background: linear-gradient(to right, #ff5f6d, #ffc371); /* A modern gradient */
     color: white;
+    border-radius: 10px; /* Rounded corners for the container */
 }
 
 /* News Section */
 .news-container {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-top: -50px; /* Overlap the news section over the welcome section */
-    padding: 40px;
-    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding-top: 20px;
 }
 
 .news-item {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    overflow: hidden; /* Ensures the content fits within the rounded corners */
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item h3, .news-item p {
+    padding: 15px;
+}
+
+.news-item p {
+    flex-grow: 1; /* Ensures the paragraph takes up the available space, pushing the date to the bottom */
 }
 
 .news-date {
+    background-color: #f0f2f5;
     color: #999;
+    padding: 10px 15px;
     font-size: 14px;
+    text-align: right;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container, .news-container {
-        padding: 20px;
-    }
-
-    .container {
-        padding-top: 50px;
-        padding-bottom: 50px;
+    .news-container {
+        grid-template-columns: 1fr; /* Stack the cards on smaller screens */
     }
 }
