@@ -1,77 +1,74 @@
-/* Reset some basic elements */
+/* Global Settings */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Dark theme background */
+    color: #E0E0E0; /* Light text color for readability */
 }
 
-/* Navigation Button */
+/* Navigation Buttons */
 .navigation-button {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #03DAC5; /* Accent color */
+    color: #000;
     padding: 10px 20px;
-    border-radius: 5px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px; /* Rounded edges for a modern look */
+    cursor: pointer;
     text-decoration: none;
-    font-size: 16px;
-    margin: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .navigation-button:hover {
-    background-color: #0056b3;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #018786; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect for interactivity */
 }
 
-/* Container for characters, for centering and padding */
-.character {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-}
-
-.character img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
+/* Page Title */
 h2 {
     text-align: center;
-    color: #007bff;
+    color: #BB86FC; /* Vibrant purple for contrast */
     margin: 20px 0;
 }
 
-.character h3 {
-    margin-top: 0;
+/* Character Cards */
+.character {
+    background-color: #1F1B24; /* Slightly lighter dark shade for card backgrounds */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Subtle shadow for depth */
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between image and text */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.character:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5); /* Enhanced shadow for a 3D effect */
+}
+
+.character img {
+    width: 100px; /* Fixed width for character images */
+    height: 100px; /* Fixed height for character images */
+    border-radius: 50%; /* Circle crop for character images */
+    object-fit: cover; /* Ensure images cover the circular area */
+}
+
+.character h3, .character p {
+    margin: 0; /* Remove default margins for a cleaner look */
 }
 
 /* Responsive Design */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .character {
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 20px;
-        width: 80%;
-        max-width: 600px;
+        flex-direction: column; /* Stack elements on smaller screens */
+        text-align: center; /* Center text for a cohesive look on mobile */
     }
 
     .character img {
-        width: 150px; /* Fixed width for larger screens */
-        margin-right: 20px;
+        margin-bottom: 20px; /* Space between image and text on mobile */
     }
 }
-
