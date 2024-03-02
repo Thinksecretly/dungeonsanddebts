@@ -22,7 +22,7 @@ body, html {
 
 .navigation-button:hover {
     background-color: #018786; /* Darker shade on hover */
-    transform: scale(1.05); /* Slight zoom effect for interactivity */
+    transform: scale(1.01); /* Slight zoom effect for interactivity */
 }
 
 /* Page Title */

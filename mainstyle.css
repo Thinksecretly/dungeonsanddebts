@@ -8,8 +8,26 @@ body, html {
     transition: background-color 0.3s, color 0.3s;
 }
 
+.navigation-button {
+    background-color: #03DAC5;
+    color: #2c0061;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    
+}
+
+.navigation-button:hover {
+    background-color: #018786;
+    transform: scale(1.01);
+}
+
 a {
-    color: #BB86FC; /* Vibrant purple for links */
+    color: #2c0061; /* Vibrant purple for links */
     text-decoration: none;
     transition: color 0.2s;
 }
@@ -99,19 +117,5 @@ p {
         padding: 40px 10px;
     }
 }
-.navigation-button {
-    background-color: #03DAC5;
-    color: #000;
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.2s;
-}
 
-.navigation-button:hover {
-    background-color: #018786;
-    transform: scale(1.05);
-}
+
